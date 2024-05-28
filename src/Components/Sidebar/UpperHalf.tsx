@@ -4,7 +4,7 @@ import cloudyNight from '../../Assets/cloudyNight.png'
 function UpperHalf(){
     return(
        <div className="h-[50%] w-full p-4 flex flex-col basis-[65%] justify-center items-center">
-          <div className="flex flex-start w-full mt-8">
+          <div className="flex flex-start w-full mt-16">
             {/* search bar div */}
             <input 
             placeholder="Search...."
