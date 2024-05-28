@@ -4,7 +4,7 @@ import WeekRow from "./WeekRow";
 
 function MainData() {
     return (
-        <div className="basis-[70%] flex flex-col justify-between py-5 items-center text-black rounded-br-3xl rounded-tr-3xl h-full bg-[#f6f6f8]" >
+        <div className="overflow-y-auto basis-[70%] flex flex-col justify-start py-5 items-center text-black rounded-br-3xl rounded-tr-3xl h-full bg-[#f6f6f8]" >
             <TopRow />
             <WeekRow />
             <div>

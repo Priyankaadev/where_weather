@@ -1,6 +1,6 @@
 function TopRow() {
     return (
-        <div className="flex justify-between items-center w-full py-6 px-2">
+        <div className="flex justify-between items-center w-full py-6 px-10">
             <div className="flex items-center justify-center text-xl font-semibold">
                 {/* Today or week */}
                 <div className="mr-4">
