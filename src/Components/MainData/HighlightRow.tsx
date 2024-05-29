@@ -8,8 +8,7 @@ return (
        <HighlightCards title="UV Index" data="3.8" footer="Low" />
        <HighlightCards title="UV Index" data="3.8" footer="Low" />
        <HighlightCards title="UV Index" data="3.8" footer="Low" />
-       <HighlightCards title="UV Index" data="3.8" footer="Low" />
-       <HighlightCards title="UV Index" data="3.8" footer="Low" />
+
     </div>
 )
 }
