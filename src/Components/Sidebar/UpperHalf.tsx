@@ -1,7 +1,11 @@
 import { AiOutlineSearch } from "react-icons/ai";
 import cloudyNight from '../../Assets/cloudyNight.png'
+import { useSelector } from "react-redux";
+import ReduxState from "../../Interfaces/ReduxState";
 
 function UpperHalf(){
+
+  const currentData = useSelector((state: ReduxState)=> state.forecast.data.currentData)
     return(
        <div className="h-[50%] w-full p-4 flex flex-col basis-[65%] justify-center items-center">
           <div className="flex flex-start w-full mt-16">
@@ -26,7 +30,7 @@ function UpperHalf(){
           <div>
             {/* temperature data */}
             <div className=" text-7xl flex items-start text-black">
-                <div>24</div>
+                <div>{currentData.temp_c}</div>
                 <div className="text-5xl mt-1">°C</div>
             </div>
             <div className="text-black text-center text-md">

@@ -12,6 +12,7 @@ const initialState: ForecastDataState = {
             localtime: ''
         },
         dayforecast: [],
+        // hourForecast: [],
         currentData: {
             uv: 0,
             wind_kmph: 0,
@@ -28,8 +29,9 @@ const initialState: ForecastDataState = {
         }
     },
 }
-export const fetchData = createAsyncThunk('data/fetchdata', async () => {
+export const fetchData = createAsyncThunk('data/fetchdata', async (city: string) => {
     try {
+      
         const response = await axiosInstance.get(`/forecast.json?key=${import.meta.env.VITE_API_KEY}&days=7&aqi=yes&q=Bengaluru`)
         console.log(response);
         return response;
@@ -42,7 +44,7 @@ export const fetchData = createAsyncThunk('data/fetchdata', async () => {
 const forecastSlice = createSlice({
     name: 'forecast',
     initialState,
-    reducers: {},
+    reducers: {   },
     extraReducers: (builder) => {
         builder.addCase(fetchData.fulfilled, (state, action) => {
             console.log('action', action);
@@ -84,5 +86,4 @@ const forecastSlice = createSlice({
             })
     }
 })
-
 export default forecastSlice.reducer

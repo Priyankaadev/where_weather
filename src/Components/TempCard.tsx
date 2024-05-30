@@ -10,7 +10,7 @@ return (
              src={image}  />
         </div>
         <div>
-            {temperature}
+            {temperature}°C
         </div>
     </div>
 )
